@@ -102,12 +102,12 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-accent shadow-gold">
+            <Card className="bg-foreground shadow-gold">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <h3 className="text-2xl font-bold text-background mb-4">
                   Consultația Inițială Este Gratuită!
                 </h3>
-                <p className="text-primary/80 mb-6">
+                <p className="text-background/80 mb-6">
                   Programează o întâlnire pentru a discuta proiectul tău și a primi sfaturi personalizate.
                 </p>
                 <Button variant="hero">
