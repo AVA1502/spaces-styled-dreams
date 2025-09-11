@@ -8,70 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Elegant Interior Design Color Palette */
-    --background: 30 20% 98%;
-    --foreground: 210 15% 15%;
+    /* Minimal Dark Architecture Color Palette */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Deep navy primary with gold accents */
-    --primary: 210 50% 15%;
-    --primary-foreground: 30 20% 98%;
+    /* Clean white primary */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
 
-    /* Warm gold secondary */
-    --secondary: 45 90% 60%;
-    --secondary-foreground: 210 50% 15%;
+    /* Subtle gray secondary */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
 
-    /* Soft neutral muted */
-    --muted: 30 15% 95%;
-    --muted-foreground: 210 10% 45%;
+    /* Muted gray */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    /* Warm accent */
-    --accent: 25 25% 90%;
-    --accent-foreground: 210 15% 15%;
+    /* Subtle accent */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 30 15% 90%;
-    --input: 30 15% 95%;
-    --ring: 45 90% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 95%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
-    /* Elegant gradients for interior design */
-    --gradient-hero: linear-gradient(135deg, hsl(210 50% 15%) 0%, hsl(210 40% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 90% 60%) 0%, hsl(35 80% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 98%) 0%, hsl(30 15% 95%) 100%);
+    /* Minimal gradients */
+    --gradient-hero: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    --gradient-accent: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-subtle: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
 
-    /* Elegant shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(210 50% 15% / 0.1);
-    --shadow-gold: 0 5px 20px -5px hsl(45 90% 60% / 0.15);
-    --shadow-card: 0 4px 20px -4px hsl(210 15% 15% / 0.08);
+    /* Clean shadows */
+    --shadow-elegant: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    --shadow-minimal: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
 
-    /* Smooth transitions */
+    /* Precise transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-quick: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 0% 95%;
   }
 
   .dark {
@@ -140,8 +133,8 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-elegant);
   }
   
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .shadow-minimal {
+    box-shadow: var(--shadow-minimal);
   }
   
   .shadow-card {
