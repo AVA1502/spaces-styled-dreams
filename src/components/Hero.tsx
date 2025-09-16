@@ -42,8 +42,8 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 w-full px-12">
         <div className="max-w-4xl">
-          <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-light leading-[0.8] text-foreground tracking-[0.3em] mb-8">
-            BLACK LINE
+          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-light leading-[0.8] text-foreground tracking-[0.1em] mb-8 lowercase">
+            design & architecture
           </h1>
           <div className="text-sm md:text-base text-muted-foreground font-light tracking-[0.2em] mb-4">
             2024 București, România, 450 m²
