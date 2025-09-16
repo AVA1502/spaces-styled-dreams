@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 w-full px-12">
         <div className="max-w-4xl">
-          <h1 className="text-[4rem] md:text-[6rem] lg:text-[8rem] font-light leading-[0.8] text-foreground tracking-[0.1em] mb-8 lowercase">
+          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-8 lowercase whitespace-nowrap">
             design & architecture
           </h1>
           <div className="text-sm md:text-base text-muted-foreground font-light tracking-[0.2em] mb-4">
