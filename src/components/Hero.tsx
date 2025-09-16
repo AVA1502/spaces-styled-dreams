@@ -25,15 +25,15 @@ const Hero = () => {
         <div>2024 București, România</div>
       </div>
       
-      {/* Main Content - Bottom of page */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center text-center">
+      {/* Main Content - Bottom of page, centered */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl">
         {/* Title above carousel */}
-        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-12 lowercase whitespace-nowrap">
+        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-8 lowercase text-center">
           design & architecture
         </h1>
         
         {/* Image Progress Indicator - Carousel */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-center">
           {images.map((_, index) => <div key={index} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImage ? 'bg-foreground' : 'bg-foreground/30'}`} />)}
         </div>
       </div>
