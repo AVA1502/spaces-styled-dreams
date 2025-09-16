@@ -5,13 +5,9 @@ const Hero = () => {
   const videos = ["/video-1.mp4", "/video-2.mp4", "/video-3.mp4", "/video-4.mp4"];
   const [currentVideo, setCurrentVideo] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVideo(prev => (prev + 1) % videos.length);
-    }, 10000); // Switch video every 10 seconds
-
-    return () => clearInterval(interval);
-  }, [videos.length]);
+  const handleVideoEnd = () => {
+    setCurrentVideo(prev => (prev + 1) % videos.length);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -22,8 +18,8 @@ const Hero = () => {
             key={index}
             autoPlay 
             muted 
-            loop 
             playsInline
+            onEnded={handleVideoEnd}
             className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[2000ms] ${
               index === currentVideo ? 'opacity-70' : 'opacity-0'
             }`}
