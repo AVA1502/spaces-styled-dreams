@@ -35,17 +35,19 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
       
-      {/* Main Content - Centered */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-5xl px-6">
-        {/* Main Title */}
-        <h1 className="text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-light leading-none text-white tracking-[0.02em] mb-6">
-          design & architecture
-        </h1>
-        
-        {/* Subtitle */}
-        <p className="text-base md:text-lg text-white/80 font-light tracking-[0.1em] max-w-2xl">
-          Îmbunătățim calitatea vieții, excluzând mediocritatea
-        </p>
+      {/* Main Content - Bottom Positioned */}
+      <div className="absolute bottom-16 left-0 right-0 z-10 flex flex-col items-center text-center w-full px-6">
+        <div className="max-w-5xl">
+          {/* Main Title */}
+          <h1 className="text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-light leading-none text-white tracking-[0.02em] mb-6">
+            design & architecture
+          </h1>
+          
+          {/* Subtitle */}
+          <p className="text-base md:text-lg text-white/80 font-light tracking-[0.1em] max-w-2xl mx-auto">
+            Îmbunătățim calitatea vieții, excluzând mediocritatea
+          </p>
+        </div>
       </div>
       
       {/* Write Us Button - Top Right */}
