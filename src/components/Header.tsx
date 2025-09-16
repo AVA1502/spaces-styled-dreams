@@ -5,7 +5,7 @@ const Header = () => {
         <nav className="flex items-center justify-between lg:justify-center relative">
           {/* Left side navigation */}
           <div className="hidden lg:flex items-center gap-8 absolute left-0">
-            <a href="#interioare" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+            <a href="/interioare" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Interioare
             </a>
             <a href="#arhitectura" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
