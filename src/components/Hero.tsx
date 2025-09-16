@@ -28,7 +28,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 w-full px-12">
         <div className="max-w-4xl">
-          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-8 lowercase whitespace-nowrap mx-px">
+          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-8 lowercase whitespace-nowrap px-[239px] my-[92px] mx-[109px] py-[33px]">
             design & architecture
           </h1>
           
@@ -37,8 +37,8 @@ const Hero = () => {
       
       {/* Bottom Info */}
       <div className="absolute bottom-12 left-12 text-xs text-muted-foreground font-light tracking-widest">
-        <div className="mb-2">Elena Popesc</div>
-        <div>Architect & Interior Designer</div>
+        
+        
       </div>
 
       {/* Image Progress Indicator */}
