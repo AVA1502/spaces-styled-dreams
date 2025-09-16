@@ -1,21 +1,34 @@
 const Header = () => {
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-sm">
-      <div className="container mx-auto px-12 py-8">
-        <nav className="flex items-center justify-between">
-          <div className="hidden md:flex items-center gap-16">
-            <a href="#despre" className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-quick font-light">Proiecte</a>
-            <a href="#servicii" className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-quick font-light">Arhitectură</a>
-            <a href="#portofoliu" className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-quick font-light">Interior</a>
-            <a href="#contact" className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-quick font-light">Contact</a>
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
+      <div className="container mx-auto px-8 py-6">
+        <nav className="flex items-center justify-center">
+          {/* Left side navigation */}
+          <div className="hidden md:flex items-center gap-12 absolute left-8">
+            <a href="#interioare" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+              Interioare
+            </a>
+            <a href="#arhitectura" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+              Arhitectură
+            </a>
+            <a href="#servicii" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+              Servicii
+            </a>
+            <a href="#contact" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+              Contact
+            </a>
           </div>
           
-          <a href="/" className="absolute left-1/2 transform -translate-x-1/2 text-lg uppercase tracking-[0.3em] text-foreground font-medium hover:text-primary transition-quick cursor-pointer">
+          {/* Centered Logo */}
+          <a 
+            href="/" 
+            className="text-xl uppercase tracking-[0.3em] text-white font-light hover:text-white/80 transition-quick cursor-pointer"
+          >
             hot walls
           </a>
-          
-          <div className="w-0 md:w-auto"></div>
         </nav>
       </div>
-    </header>;
+    </header>
+  );
 };
 export default Header;

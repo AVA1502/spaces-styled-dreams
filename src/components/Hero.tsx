@@ -1,47 +1,68 @@
 import { useEffect, useState } from "react";
-import interior1 from "@/assets/interior-1.jpg";
-import interior2 from "@/assets/interior-2.jpg";
-import interior3 from "@/assets/interior-3.jpg";
-import interior4 from "@/assets/interior-4.jpg";
-import interior5 from "@/assets/interior-5.jpg";
+import { Button } from "@/components/ui/button";
+import livingRoom from "@/assets/living-room.jpg";
+import darkInterior from "@/assets/dark-interior.jpg";
+import bedroomLuxury from "@/assets/bedroom-luxury.jpg";
+
 const Hero = () => {
-  const images = [interior1, interior2, interior3, interior4, interior5];
+  const images = [livingRoom, darkInterior, bedroomLuxury];
   const [currentImage, setCurrentImage] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % images.length);
-    }, 4000);
+    }, 5000);
+
     return () => clearInterval(interval);
   }, [images.length]);
-  return <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Animated Background Images */}
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Images with Overlay */}
       <div className="absolute inset-0">
-        {images.map((image, index) => <img key={index} src={image} alt={`Modern interior design ${index + 1}`} className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-2000 ${index === currentImage ? 'opacity-40' : 'opacity-0'}`} />)}
-        <div className="absolute inset-0 bg-background/50"></div>
+        {images.map((image, index) => (
+          <img 
+            key={index} 
+            src={image} 
+            alt={`Elegant interior design ${index + 1}`} 
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[3000ms] ${
+              index === currentImage ? 'opacity-70' : 'opacity-0'
+            }`} 
+          />
+        ))}
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
-      {/* Year and Location - Top Right */}
-      <div className="absolute top-12 right-12 text-right text-xs text-muted-foreground font-light tracking-widest">
-        <div>2024 București, România</div>
-      </div>
-      
-      {/* Main Content - Bottom of page, centered */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl">
-        {/* Title */}
-        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] lowercase text-center">
+      {/* Main Content - Centered */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-5xl px-6">
+        {/* Main Title */}
+        <h1 className="text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-light leading-none text-white tracking-[0.02em] mb-6">
           design & architecture
         </h1>
         
         {/* Subtitle */}
-        <p className="text-sm md:text-base text-muted-foreground font-light tracking-widest mt-4 text-center">Îmbunătățim calitatea vieții, excluzând tot ce este in plus</p>
+        <p className="text-base md:text-lg text-white/80 font-light tracking-[0.1em] max-w-2xl">
+          Îmbunătățim calitatea vieții, excluzând mediocritatea
+        </p>
       </div>
       
-      {/* Bottom Info */}
-      <div className="absolute bottom-12 left-12 text-xs text-muted-foreground font-light tracking-widest">
-        
-        
+      {/* Write Us Button - Top Right */}
+      <div className="absolute top-8 right-8 z-20">
+        <Button 
+          variant="outline" 
+          className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black transition-smooth px-6 py-2 text-sm tracking-wider"
+        >
+          Scrie-ne
+        </Button>
       </div>
-
-    </section>;
+      
+      {/* Year and Location - Top Right below button */}
+      <div className="absolute top-20 right-8 text-right text-xs text-white/60 font-light tracking-widest">
+        <div>2024 București, România</div>
+      </div>
+    </section>
+  );
 };
+
 export default Hero;
