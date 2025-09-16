@@ -1,11 +1,8 @@
 const About = () => {
-  return (
-    <section id="despre" className="py-32 bg-background">
+  return <section id="despre" className="py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground mb-8">
-            Despre Designer
-          </div>
+          
           
           <h2 className="text-6xl md:text-7xl font-light mb-12 leading-tight text-foreground">
             ARHITECTURĂ
@@ -45,8 +42,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
