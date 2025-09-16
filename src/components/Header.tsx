@@ -1,10 +1,10 @@
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
-      <div className="container mx-auto px-8 py-6">
-        <nav className="flex items-center justify-center">
+      <div className="container mx-auto px-4 py-6">
+        <nav className="flex items-center justify-between lg:justify-center relative">
           {/* Left side navigation */}
-          <div className="hidden md:flex items-center gap-12 absolute left-8">
+          <div className="hidden lg:flex items-center gap-8 absolute left-0">
             <a href="#interioare" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Interioare
             </a>
@@ -22,7 +22,7 @@ const Header = () => {
           {/* Centered Logo */}
           <a 
             href="/" 
-            className="text-xl uppercase tracking-[0.3em] text-white font-light hover:text-white/80 transition-quick cursor-pointer"
+            className="text-xl uppercase tracking-[0.3em] text-white font-light hover:text-white/80 transition-quick cursor-pointer mx-auto lg:mx-0"
           >
             hot walls
           </a>
