@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const videos = ["/video-1.mp4", "/video-2.mp4"];
+  const videos = ["/video-1.mp4", "/video-2.mp4", "/video-3.mp4", "/video-4.mp4"];
   const [currentVideo, setCurrentVideo] = useState(0);
 
   useEffect(() => {
