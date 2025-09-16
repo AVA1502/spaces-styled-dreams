@@ -31,6 +31,11 @@ const Hero = () => {
         <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] lowercase text-center">
           design & architecture
         </h1>
+        
+        {/* Subtitle */}
+        <p className="text-sm md:text-base text-muted-foreground font-light tracking-widest mt-4 text-center">
+          Îmbunătățim calitatea vieții, excluzând mediocritatea
+        </p>
       </div>
       
       {/* Bottom Info */}
