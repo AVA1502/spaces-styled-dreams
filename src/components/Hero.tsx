@@ -1,37 +1,23 @@
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import livingRoom from "@/assets/living-room.jpg";
-import darkInterior from "@/assets/dark-interior.jpg";
-import bedroomLuxury from "@/assets/bedroom-luxury.jpg";
 
 const Hero = () => {
-  const images = [livingRoom, darkInterior, bedroomLuxury];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage(prev => (prev + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background Images with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0">
-        {images.map((image, index) => (
-          <img 
-            key={index} 
-            src={image} 
-            alt={`Elegant interior design ${index + 1}`} 
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[3000ms] ${
-              index === currentImage ? 'opacity-70' : 'opacity-0'
-            }`} 
-          />
-        ))}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eeacb27607b05ecdc1d41be2d1a8c1db0e8a9&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
+          {/* Fallback pentru browsere care nu suportă video */}
+          <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-black"></div>
+        </video>
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
       
       {/* Main Content - Centered */}
