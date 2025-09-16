@@ -25,13 +25,16 @@ const Hero = () => {
         <div>2024 București, România</div>
       </div>
       
-      {/* Main Content */}
-      <div className="relative z-10 w-full px-12">
-        <div className="max-w-4xl">
-          <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-8 lowercase whitespace-nowrap px-[239px] my-[92px] mx-[109px] py-[33px]">
-            design & architecture
-          </h1>
-          
+      {/* Main Content - Centered */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
+        {/* Title above carousel */}
+        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-12 lowercase whitespace-nowrap">
+          design & architecture
+        </h1>
+        
+        {/* Image Progress Indicator - Carousel */}
+        <div className="flex gap-2">
+          {images.map((_, index) => <div key={index} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImage ? 'bg-foreground' : 'bg-foreground/30'}`} />)}
         </div>
       </div>
       
@@ -41,10 +44,6 @@ const Hero = () => {
         
       </div>
 
-      {/* Image Progress Indicator */}
-      <div className="absolute bottom-12 right-12 flex gap-2">
-        {images.map((_, index) => <div key={index} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImage ? 'bg-foreground' : 'bg-foreground/30'}`} />)}
-      </div>
     </section>;
 };
 export default Hero;
