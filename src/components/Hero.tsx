@@ -1,21 +1,36 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const videos = ["/video-1.mp4", "/video-2.mp4"];
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo(prev => (prev + 1) % videos.length);
+    }, 10000); // Switch video every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [videos.length]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background Video with Overlay */}
+      {/* Background Videos with Overlay */}
       <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eeacb27607b05ecdc1d41be2d1a8c1db0e8a9&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-          {/* Fallback pentru browsere care nu suportă video */}
-          <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-black"></div>
-        </video>
+        {videos.map((video, index) => (
+          <video 
+            key={index}
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[2000ms] ${
+              index === currentVideo ? 'opacity-70' : 'opacity-0'
+            }`}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ))}
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
