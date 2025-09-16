@@ -25,8 +25,8 @@ const Hero = () => {
         <div>2024 București, România</div>
       </div>
       
-      {/* Main Content - Centered */}
-      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
+      {/* Main Content - Bottom of page */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center text-center">
         {/* Title above carousel */}
         <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-light leading-none text-foreground tracking-[0.05em] mb-12 lowercase whitespace-nowrap">
           design & architecture
