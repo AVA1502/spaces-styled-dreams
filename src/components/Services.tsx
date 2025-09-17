@@ -26,12 +26,12 @@ const Services = () => {
     image: luxuryInteriorImage,
     description: "Interior de lux"
   }];
-  return <section id="servicii" className="py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
+  return <section id="servicii" className="bg-background">
+      <div className="w-full">
+        <div className="w-full">
           
 
-          <div className="grid grid-cols-2 gap-y-6 gap-x-0">
+          <div className="grid grid-cols-2 gap-y-6 gap-x-0 w-full">
             {projects.map((project, index) => <div key={index} className="group overflow-hidden cursor-pointer">
                 <div className="relative h-96 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -43,7 +43,7 @@ const Services = () => {
               </div>)}
           </div>
 
-          <div className="mt-32 text-center">
+          <div className="py-32 text-center">
             <Button variant="outline" size="lg" className="border-foreground text-foreground hover:bg-foreground hover:text-background">
               Vezi Toate Proiectele
             </Button>
