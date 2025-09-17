@@ -1,6 +1,5 @@
 const Footer = () => {
-  return (
-    <footer className="border-t border-border bg-background py-16">
+  return <footer className="border-t border-border bg-background py-16">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 mb-16">
@@ -37,15 +36,11 @@ const Footer = () => {
               <div className="text-xs text-muted-foreground">
                 © {new Date().getFullYear()} Mario Ganceariuc. Toate drepturile rezervate.
               </div>
-              <div className="text-xs text-muted-foreground">
-                Design & Development by Studio
-              </div>
+              <div className="text-xs text-muted-foreground">Design & Development by nivelul0 Studio</div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
