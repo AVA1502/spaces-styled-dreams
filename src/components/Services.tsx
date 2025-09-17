@@ -26,7 +26,7 @@ const Services = () => {
     image: luxuryInteriorImage,
     description: "Interior de lux"
   }];
-  return <section id="servicii" className="bg-background">
+  return <section id="servicii" className="pt-32 bg-background">
       <div className="w-full">
         <div className="w-full">
           
