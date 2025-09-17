@@ -92,7 +92,7 @@ const ContemporaryElegance = () => {
               CONTEMPORARY ELEGANCE
             </h1>
             <div className="text-right text-white opacity-75 text-lg">
-              <p>2024 București, 189 m²</p>
+              
             </div>
           </div>
         </div>
