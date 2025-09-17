@@ -38,7 +38,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-6xl md:text-7xl font-light mb-20 leading-tight text-foreground">Galerie</h2>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-y-6 gap-x-0">
             {projects.map((project, index) => (
               <div key={index} className="group overflow-hidden cursor-pointer">
                 <div className="relative h-96 overflow-hidden">
