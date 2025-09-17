@@ -11,48 +11,94 @@ import contemporaryKitchen2 from "@/assets/contemporary-kitchen-2.jpg";
 import contemporaryDining from "@/assets/contemporary-dining.jpg";
 import contemporaryDining2 from "@/assets/contemporary-dining-2.jpg";
 import contemporaryMaster from "@/assets/contemporary-master.jpg";
+import contemporaryDining3 from "@/assets/contemporary-dining-3.jpg";
+import contemporaryLiving3 from "@/assets/contemporary-living-3.jpg";
 
 const ContemporaryElegance = () => {
-  const projectImages = [
+  const projectSections = [
+    // Hero image - full width
     {
-      image: contemporaryLiving,
-      title: "Salon Principal"
+      type: "hero",
+      images: [
+        {
+          image: contemporaryLiving,
+          title: "Salon Principal"
+        }
+      ]
     },
+    // Three images in a row
     {
-      image: contemporaryLiving2,
-      title: "Zona de Relaxare"
+      type: "triple",
+      images: [
+        {
+          image: contemporaryLiving2,
+          title: "Zona de Relaxare"
+        },
+        {
+          image: contemporaryDining,
+          title: "Spațiu de Luat Masa"
+        },
+        {
+          image: contemporaryDining3,
+          title: "Zona de Dining"
+        }
+      ]
     },
+    // Two images in a row
     {
-      image: contemporaryDining,
-      title: "Spațiu de Luat Masa"
+      type: "double",
+      images: [
+        {
+          image: contemporaryDining2,
+          title: "Bucătărie Deschisă"
+        },
+        {
+          image: contemporaryKitchen,
+          title: "Bucătărie Modernă"
+        }
+      ]
     },
+    // Single full-width image
     {
-      image: contemporaryDining2,
-      title: "Bucătărie Deschisă"
+      type: "single",
+      images: [
+        {
+          image: contemporaryKitchen2,
+          title: "Insulă Centrală"
+        }
+      ]
     },
+    // Three images in a row
     {
-      image: contemporaryKitchen,
-      title: "Bucătărie Modernă"
+      type: "triple",
+      images: [
+        {
+          image: contemporaryBedroom,
+          title: "Dormitor Principal"
+        },
+        {
+          image: contemporaryBathroom,
+          title: "Baie Contemporană"
+        },
+        {
+          image: contemporaryStorage,
+          title: "Spațiu de Depozitare"
+        }
+      ]
     },
+    // Two images in a row
     {
-      image: contemporaryKitchen2,
-      title: "Insulă Centrală"
-    },
-    {
-      image: contemporaryBedroom,
-      title: "Dormitor Principal"
-    },
-    {
-      image: contemporaryMaster,
-      title: "Dormitor & Baie"
-    },
-    {
-      image: contemporaryBathroom,
-      title: "Baie Contemporană"
-    },
-    {
-      image: contemporaryStorage,
-      title: "Spațiu de Depozitare"
+      type: "double",
+      images: [
+        {
+          image: contemporaryMaster,
+          title: "Dormitor & Baie"
+        },
+        {
+          image: contemporaryLiving3,
+          title: "Living cu TV"
+        }
+      ]
     }
   ];
 
@@ -61,7 +107,7 @@ const ContemporaryElegance = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-0 bg-black">
+      <section className="relative pt-32 pb-16 bg-black">
         <div className="w-full px-8">
           <div className="flex justify-between items-start">
             <h1 className="text-6xl md:text-8xl font-light text-white tracking-wider">
@@ -75,25 +121,77 @@ const ContemporaryElegance = () => {
       </section>
 
       {/* Project Gallery */}
-      <section className="bg-black">
-        <div className="w-full">
-          {projectImages.map((item, index) => (
-            <div key={index} className="relative">
-              <div className="relative h-screen w-full overflow-hidden group">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-black/10 transition-opacity duration-300 group-hover:bg-black/20"></div>
-                
-                {/* Image Title Overlay */}
-                <div className="absolute bottom-8 left-8 text-white">
-                  <h3 className="text-2xl md:text-3xl font-light tracking-wide">
-                    {item.title}
+      <section className="bg-black px-8 pb-16">
+        <div className="w-full space-y-16">
+          {projectSections.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="w-full">
+              {section.type === "hero" && (
+                <div className="w-full">
+                  <div className="relative h-[80vh] overflow-hidden group mb-8">
+                    <img 
+                      src={section.images[0].image} 
+                      alt={section.images[0].title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                  </div>
+                  <h3 className="text-3xl font-light text-white mb-16 text-center tracking-wide">
+                    {section.images[0].title}
                   </h3>
                 </div>
-              </div>
+              )}
+
+              {section.type === "triple" && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {section.images.map((item, index) => (
+                    <div key={index} className="group">
+                      <div className="relative h-[50vh] overflow-hidden mb-6">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                        />
+                      </div>
+                      <h3 className="text-xl font-light text-white text-center tracking-wide">
+                        {item.title}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {section.type === "double" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {section.images.map((item, index) => (
+                    <div key={index} className="group">
+                      <div className="relative h-[60vh] overflow-hidden mb-6">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                        />
+                      </div>
+                      <h3 className="text-2xl font-light text-white text-center tracking-wide">
+                        {item.title}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {section.type === "single" && (
+                <div className="w-full">
+                  <div className="relative h-[70vh] overflow-hidden group mb-8">
+                    <img 
+                      src={section.images[0].image} 
+                      alt={section.images[0].title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                  </div>
+                  <h3 className="text-3xl font-light text-white text-center tracking-wide">
+                    {section.images[0].title}
+                  </h3>
+                </div>
+              )}
             </div>
           ))}
         </div>
