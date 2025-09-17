@@ -38,7 +38,12 @@ const Services = () => {
 
           <div className="grid grid-cols-2 gap-y-8 gap-x-0 w-full">
             {projects.map((project, index) => 
-              <Link key={index} to={project.link} className="group overflow-hidden cursor-pointer block">
+              <Link 
+                key={index} 
+                to={project.link} 
+                className="group overflow-hidden cursor-pointer block"
+                onClick={() => console.log(`Navigating to: ${project.link}`)}
+              >
                 <div className="relative h-96 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>

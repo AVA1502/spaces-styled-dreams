@@ -13,6 +13,8 @@ import architectureAerial from "@/assets/architecture-aerial.jpg";
 import architectureOpenPlan from "@/assets/architecture-open-plan.jpg";
 
 const Architecture = () => {
+  console.log("Architecture component loaded successfully");
+  
   const projectSections = [
     // Hero image - full width
     {
