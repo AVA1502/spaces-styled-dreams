@@ -31,12 +31,12 @@ const Services = () => {
         <div className="w-full">
           
 
-          <div className="grid grid-cols-2 gap-y-6 gap-x-0 w-full">
+          <div className="grid grid-cols-2 gap-y-8 gap-x-0 w-full">
             {projects.map((project, index) => <div key={index} className="group overflow-hidden cursor-pointer">
                 <div className="relative h-96 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <div className="pt-4 text-foreground">
+                <div className="pt-6 text-foreground">
                   <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
                   <p className="text-sm opacity-75">{project.description}</p>
                 </div>
