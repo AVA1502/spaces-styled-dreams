@@ -13,97 +13,75 @@ import contemporaryDining2 from "@/assets/contemporary-dining-2.jpg";
 import contemporaryMaster from "@/assets/contemporary-master.jpg";
 import contemporaryDining3 from "@/assets/contemporary-dining-3.jpg";
 import contemporaryLiving3 from "@/assets/contemporary-living-3.jpg";
-
 const ContemporaryElegance = () => {
   const projectSections = [
-    // Hero image - full width
-    {
-      type: "hero",
-      images: [
-        {
-          image: contemporaryLiving,
-          title: "Salon Principal"
-        }
-      ]
-    },
-    // Three images in a row
-    {
-      type: "triple",
-      images: [
-        {
-          image: contemporaryLiving2,
-          title: "Zona de Relaxare"
-        },
-        {
-          image: contemporaryDining,
-          title: "Spațiu de Luat Masa"
-        },
-        {
-          image: contemporaryDining3,
-          title: "Zona de Dining"
-        }
-      ]
-    },
-    // Two images in a row
-    {
-      type: "double",
-      images: [
-        {
-          image: contemporaryDining2,
-          title: "Bucătărie Deschisă"
-        },
-        {
-          image: contemporaryKitchen,
-          title: "Bucătărie Modernă"
-        }
-      ]
-    },
-    // Single full-width image
-    {
-      type: "single",
-      images: [
-        {
-          image: contemporaryKitchen2,
-          title: "Insulă Centrală"
-        }
-      ]
-    },
-    // Three images in a row
-    {
-      type: "triple",
-      images: [
-        {
-          image: contemporaryBedroom,
-          title: "Dormitor Principal"
-        },
-        {
-          image: contemporaryBathroom,
-          title: "Baie Contemporană"
-        },
-        {
-          image: contemporaryStorage,
-          title: "Spațiu de Depozitare"
-        }
-      ]
-    },
-    // Two images in a row
-    {
-      type: "double",
-      images: [
-        {
-          image: contemporaryMaster,
-          title: "Dormitor & Baie"
-        },
-        {
-          image: contemporaryLiving3,
-          title: "Living cu TV"
-        }
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black">
+  // Hero image - full width
+  {
+    type: "hero",
+    images: [{
+      image: contemporaryLiving,
+      title: "Salon Principal"
+    }]
+  },
+  // Three images in a row
+  {
+    type: "triple",
+    images: [{
+      image: contemporaryLiving2,
+      title: "Zona de Relaxare"
+    }, {
+      image: contemporaryDining,
+      title: "Spațiu de Luat Masa"
+    }, {
+      image: contemporaryDining3,
+      title: "Zona de Dining"
+    }]
+  },
+  // Two images in a row
+  {
+    type: "double",
+    images: [{
+      image: contemporaryDining2,
+      title: "Bucătărie Deschisă"
+    }, {
+      image: contemporaryKitchen,
+      title: "Bucătărie Modernă"
+    }]
+  },
+  // Single full-width image
+  {
+    type: "single",
+    images: [{
+      image: contemporaryKitchen2,
+      title: "Insulă Centrală"
+    }]
+  },
+  // Three images in a row
+  {
+    type: "triple",
+    images: [{
+      image: contemporaryBedroom,
+      title: "Dormitor Principal"
+    }, {
+      image: contemporaryBathroom,
+      title: "Baie Contemporană"
+    }, {
+      image: contemporaryStorage,
+      title: "Spațiu de Depozitare"
+    }]
+  },
+  // Two images in a row
+  {
+    type: "double",
+    images: [{
+      image: contemporaryMaster,
+      title: "Dormitor & Baie"
+    }, {
+      image: contemporaryLiving3,
+      title: "Living cu TV"
+    }]
+  }];
+  return <div className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section */}
@@ -123,77 +101,39 @@ const ContemporaryElegance = () => {
       {/* Project Gallery */}
       <section className="bg-black px-8 pb-16">
         <div className="w-full space-y-16">
-          {projectSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="w-full">
-              {section.type === "hero" && (
-                <div className="w-full">
+          {projectSections.map((section, sectionIndex) => <div key={sectionIndex} className="w-full">
+              {section.type === "hero" && <div className="w-full">
                   <div className="relative h-[80vh] overflow-hidden group mb-8">
-                    <img 
-                      src={section.images[0].image} 
-                      alt={section.images[0].title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                    />
+                    <img src={section.images[0].image} alt={section.images[0].title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <h3 className="text-3xl font-light text-white mb-16 text-center tracking-wide">
-                    {section.images[0].title}
-                  </h3>
-                </div>
-              )}
+                  
+                </div>}
 
-              {section.type === "triple" && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {section.images.map((item, index) => (
-                    <div key={index} className="group">
+              {section.type === "triple" && <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {section.images.map((item, index) => <div key={index} className="group">
                       <div className="relative h-[50vh] overflow-hidden mb-6">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                        />
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                       </div>
-                      <h3 className="text-xl font-light text-white text-center tracking-wide">
-                        {item.title}
-                      </h3>
-                    </div>
-                  ))}
-                </div>
-              )}
+                      
+                    </div>)}
+                </div>}
 
-              {section.type === "double" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {section.images.map((item, index) => (
-                    <div key={index} className="group">
+              {section.type === "double" && <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {section.images.map((item, index) => <div key={index} className="group">
                       <div className="relative h-[60vh] overflow-hidden mb-6">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                        />
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                       </div>
-                      <h3 className="text-2xl font-light text-white text-center tracking-wide">
-                        {item.title}
-                      </h3>
-                    </div>
-                  ))}
-                </div>
-              )}
+                      
+                    </div>)}
+                </div>}
 
-              {section.type === "single" && (
-                <div className="w-full">
+              {section.type === "single" && <div className="w-full">
                   <div className="relative h-[70vh] overflow-hidden group mb-8">
-                    <img 
-                      src={section.images[0].image} 
-                      alt={section.images[0].title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                    />
+                    <img src={section.images[0].image} alt={section.images[0].title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <h3 className="text-3xl font-light text-white text-center tracking-wide">
-                    {section.images[0].title}
-                  </h3>
-                </div>
-              )}
-            </div>
-          ))}
+                  
+                </div>}
+            </div>)}
         </div>
       </section>
 
@@ -207,11 +147,7 @@ const ContemporaryElegance = () => {
             <p className="text-lg text-white/75 mb-12 max-w-2xl mx-auto">
               Descoperă cum putem transforma spațiul tău într-un mediu contemporan elegant
             </p>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
-            >
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black transition-colors duration-300">
               Contactează-ne
             </Button>
           </div>
@@ -219,8 +155,6 @@ const ContemporaryElegance = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ContemporaryElegance;
