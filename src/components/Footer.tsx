@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="space-y-4">
               <div className="text-sm uppercase tracking-widest text-foreground font-light">
-                Elena Popescu
+                Mario Ganceariuc
               </div>
               <div className="text-xs uppercase tracking-wider text-muted-foreground">
                 Interior Design Studio
@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="text-xs uppercase tracking-wider text-muted-foreground">Contact</div>
               <div className="space-y-2 text-sm">
-                <div className="text-foreground">elena@popescudesign.ro</div>
+                <div className="text-foreground">mario@ganceariucdesign.ro</div>
                 <div className="text-foreground">+40 755 123 456</div>
                 <div className="text-foreground">București, România</div>
               </div>
@@ -25,8 +25,8 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="text-xs uppercase tracking-wider text-muted-foreground">Social</div>
               <div className="space-y-2 text-sm">
-                <div><a href="#" className="text-foreground hover:text-muted-foreground transition-quick">Instagram</a></div>
-                <div><a href="#" className="text-foreground hover:text-muted-foreground transition-quick">LinkedIn</a></div>
+                <div><a href="https://www.instagram.com/mario.gancearuc/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-quick">Instagram</a></div>
+                <div><a href="https://www.linkedin.com/in/gancearuc-mario-45750b255/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-muted-foreground transition-quick">LinkedIn</a></div>
                 <div><a href="#" className="text-foreground hover:text-muted-foreground transition-quick">Behance</a></div>
               </div>
             </div>
@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-xs text-muted-foreground">
-                © {new Date().getFullYear()} Elena Popescu. Toate drepturile rezervate.
+                © {new Date().getFullYear()} Mario Ganceariuc. Toate drepturile rezervate.
               </div>
               <div className="text-xs text-muted-foreground">
                 Design & Development by Studio
