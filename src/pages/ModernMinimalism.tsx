@@ -10,6 +10,10 @@ import modernOpenSpace from "@/assets/modern-open-space.jpg";
 import modernKitchen4 from "@/assets/modern-kitchen-4.jpg";
 import modernLiving3 from "@/assets/modern-living-3.jpg";
 import modernLiving4 from "@/assets/modern-living-4.jpg";
+import modernFloorplan2 from "@/assets/modern-floorplan-2.jpg";
+import modernLiving5 from "@/assets/modern-living-5.jpg";
+import modernDining from "@/assets/modern-dining.jpg";
+import modernBedroom2 from "@/assets/modern-bedroom-2.jpg";
 
 const ModernMinimalism = () => {
   const projectSections = [
@@ -63,6 +67,28 @@ const ModernMinimalism = () => {
       }, {
         image: modernLiving4,
         title: "Zona de Relaxare"
+      }]
+    },
+    // Single full-width image
+    {
+      type: "single",
+      images: [{
+        image: modernFloorplan2,
+        title: "Plan Arhitectural"
+      }]
+    },
+    // Three images in a row
+    {
+      type: "triple",
+      images: [{
+        image: modernLiving5,
+        title: "Living cu Separator Vertical"
+      }, {
+        image: modernDining,
+        title: "Zona de Masă Modernă"
+      }, {
+        image: modernBedroom2,
+        title: "Dormitor Contemporary"
       }]
     }
   ];
