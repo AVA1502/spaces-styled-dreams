@@ -19,7 +19,7 @@ const Header = () => {
           </div>
           
           {/* Centered Logo */}
-          <a href="/" className="text-xl uppercase tracking-[0.3em] text-white font-light hover:text-white/80 transition-quick cursor-pointer py-0 px-px mx-0 my-0">
+          <a href="/" className="text-xl tracking-[0.05em] text-white font-light hover:text-white/80 transition-quick cursor-pointer py-2 px-px mx-0 my-0">
             hot walls
           </a>
         </nav>
