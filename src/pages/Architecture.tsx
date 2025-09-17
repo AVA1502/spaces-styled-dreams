@@ -11,6 +11,15 @@ import newArchitecture7 from "@/assets/new-architecture-7.jpg";
 import newArchitecture8 from "@/assets/new-architecture-8.jpg";
 import newArchitecture9 from "@/assets/new-architecture-9.jpg";
 import newArchitecture10 from "@/assets/new-architecture-10.jpg";
+import architectureSection from "@/assets/architecture-section.jpg";
+import architectureMarbleLiving from "@/assets/architecture-marble-living.jpg";
+import architectureLuxuryBathroom from "@/assets/architecture-luxury-bathroom.jpg";
+import architectureFireplaceLiving from "@/assets/architecture-fireplace-living.jpg";
+import architecturePoolView from "@/assets/architecture-pool-view.jpg";
+import architectureWoodExterior from "@/assets/architecture-wood-exterior.jpg";
+import architectureConcreteInterior from "@/assets/architecture-concrete-interior.jpg";
+import architectureMarbleBathroom from "@/assets/architecture-marble-bathroom.jpg";
+import architectureElevation from "@/assets/architecture-elevation.jpg";
 const Architecture = () => {
   const projectSections = [
   // Hero image - full width
@@ -50,8 +59,41 @@ const Architecture = () => {
   {
     type: "single",
     images: [{
+      image: architecturePoolView,
+      title: "Arhitectură Contemporană cu Piscină și Lemn"
+    }]
+  },
+  // Two images in a row - new images
+  {
+    type: "double",
+    images: [{
+      image: architectureMarbleLiving,
+      title: "Living cu Accent de Marmură Albastră"
+    }, {
+      image: architectureFireplaceLiving,
+      title: "Șemineu cu Marmură și Tavan din Lemn"
+    }]
+  },
+  // Single full-width image
+  {
+    type: "single",
+    images: [{
       image: newArchitecture8,
       title: "Vedere Aeriană a Proiectului"
+    }]
+  },
+  // Three images - bathrooms and interior
+  {
+    type: "triple",
+    images: [{
+      image: architectureLuxuryBathroom,
+      title: "Baie de Lux cu Marmură"
+    }, {
+      image: architectureMarbleBathroom,
+      title: "Baie Minimalistă cu Accent de Marmură"
+    }, {
+      image: architectureConcreteInterior,
+      title: "Interior cu Beton și Iluminat Artistic"
     }]
   },
   // Two images in a row
@@ -61,14 +103,28 @@ const Architecture = () => {
       image: newArchitecture7,
       title: "Terasă Acoperită cu Vezi la Piscină"
     }, {
-      image: newArchitecture9,
-      title: "Interior Open Space cu Șemineu"
+      image: architectureWoodExterior,
+      title: "Exterior cu Finisaj din Lemn"
     }]
   },
-  // Single full-width image
+  // Two images - architectural drawings
   {
-    type: "single",
+    type: "double",
     images: [{
+      image: architectureSection,
+      title: "Secțiune Arhitecturală"
+    }, {
+      image: architectureElevation,
+      title: "Elevație Arhitecturală"
+    }]
+  },
+  // Two images in a row
+  {
+    type: "double",
+    images: [{
+      image: newArchitecture9,
+      title: "Interior Open Space cu Șemineu"
+    }, {
       image: newArchitecture10,
       title: "Bucătărie cu Tavan din Lemn"
     }]
