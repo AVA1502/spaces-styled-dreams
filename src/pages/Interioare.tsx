@@ -17,88 +17,54 @@ import designerPortraitImage from "@/assets/designer-portrait.jpg";
 const Interioare = () => {
   const projects = [
     {
-      title: "MINIMAL RESIDENCE",
-      location: "București, 2024",
-      area: "120 m²",
-      image: bedroomImage,
-      description: "Apartament contemporan cu design minimalist și materiale naturale, focusat pe funcționalitate și eleganță discretă"
-    },
-    {
-      title: "URBAN LOFT",
-      location: "Cluj-Napoca, 2024",
-      area: "90 m²",
-      image: kitchenImage,
-      description: "Spațiu industrial transformat în locuință modernă și funcțională cu accente de metal și lemn masiv"
-    },
-    {
       title: "LUXURY SUITE",
-      location: "Constanța, 2024",
-      area: "150 m²",
       image: luxuryBedroomImage,
-      description: "Dormitor de lux cu textile premium și iluminat ambiental, creat pentru confort maxim și relaxare"
+      description: "Design de lux cu accente elegante și atmosferă relaxantă"
     },
     {
       title: "DARK ELEGANCE",
-      location: "Timișoara, 2023",
-      area: "110 m²",
       image: darkInteriorImage,
-      description: "Interior sofisticat cu tonuri întunecate și accente aurii, exprimând rafinament și personalitate"
+      description: "Interior sofisticat cu tonuri întunecate și accente rafinate"
     },
     {
       title: "CONTEMPORARY LIVING",
-      location: "Iași, 2024",
-      area: "130 m²",
       image: livingRoomImage,
-      description: "Salon modern cu mobilier contemporan și spații deschise, perfect pentru viața de zi cu zi"
+      description: "Spațiu modern cu linii curate și funcționalitate optimă"
     },
     {
       title: "MODERN SANCTUARY",
-      location: "Brașov, 2023",
-      area: "95 m²",
       image: interior1Image,
-      description: "Cameră cu design curat și linii geometrice, îmbinând funcționalitatea cu estetica modernă"
+      description: "Design minimalist cu geometrie precisă și estetică contemporană"
     },
     {
       title: "REFINED COMFORT",
-      location: "Sibiu, 2024",
-      area: "140 m²",
       image: interior2Image,
-      description: "Spațiu elegant cu mobilier selectat cu grijă și detalii rafinate pentru un ambient cald și primitor"
+      description: "Ambient elegant cu detalii atent selectate și atmosferă caldă"
     },
     {
       title: "ARCHITECTURAL VISION",
-      location: "Oradea, 2023",
-      area: "160 m²",
       image: interior3Image,
-      description: "Design inovator cu elemente arhitecturale distinctive și materiale de înaltă calitate"
+      description: "Concept inovator cu elemente arhitecturale distinctive"
     },
     {
       title: "WARM ELEGANCE",
-      location: "Constanța, 2024",
-      area: "115 m²",
       image: interior4Image,
-      description: "Spațiu elegant cu tonuri calde și texturi naturale, perfect pentru relaxare și intimitate"
+      description: "Spațiu primitor cu tonuri naturale și texturi rafinate"
     },
     {
       title: "SOPHISTICATED DESIGN",
-      location: "București, 2023",
-      area: "135 m²",
       image: interior5Image,
-      description: "Design sofisticat cu atenție la detalii și materiale premium pentru un ambient rafinat"
+      description: "Design premium cu atenție la detalii și materiale selecte"
     },
     {
       title: "HERO INTERIOR",
-      location: "Cluj-Napoca, 2024",
-      area: "180 m²",
       image: heroInteriorImage,
-      description: "Spațiu spectaculos cu plafoane înalte și design dramatic, reprezentând vârful designului interior"
+      description: "Spațiu spectaculos cu design dramatic și impact vizual puternic"
     },
     {
       title: "DESIGNER STUDIO",
-      location: "Timișoara, 2024",
-      area: "75 m²",
       image: designerPortraitImage,
-      description: "Studio de design personal cu elemente artistice și mobilier de autor, reflectând creativitatea"
+      description: "Studio creativ cu elemente artistice și mobilier de autor"
     }
   ];
 
@@ -132,9 +98,6 @@ const Interioare = () => {
                       <h3 className="text-3xl md:text-4xl font-light text-foreground">
                         {project.title}
                       </h3>
-                      <div className="text-sm uppercase tracking-wider text-muted-foreground">
-                        {project.location} — {project.area}
-                      </div>
                     </div>
                     
                     <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
