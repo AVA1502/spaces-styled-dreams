@@ -37,7 +37,11 @@ const Interioare = () => {
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {projects.map((project, index) => (
-              <div key={index} className="group overflow-hidden cursor-pointer">
+              <a 
+                key={index} 
+                href={index === 0 ? "/interioare/contemporary-elegance" : "#"}
+                className="group overflow-hidden cursor-pointer block"
+              >
                 <div className="relative h-screen overflow-hidden">
                   <img 
                     src={project.image} 
@@ -54,7 +58,7 @@ const Interioare = () => {
                     {project.description}
                   </p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
