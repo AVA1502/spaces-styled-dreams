@@ -15,7 +15,7 @@ const Services = () => {
     title: "ARHITECTURĂ",
     image: architectureImage,
     description: "Proiecte arhitecturale contemporane",
-    link: "#"
+    link: "/arhitectura"
   }, {
     title: "INTERIOARE",
     image: modernBedroomImage,
