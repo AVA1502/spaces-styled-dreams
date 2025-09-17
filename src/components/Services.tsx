@@ -57,11 +57,6 @@ const Services = () => {
                   key={index} 
                   to={project.link} 
                   className="group overflow-hidden cursor-pointer block hover:opacity-90 transition-opacity"
-                  onClick={(e) => {
-                    console.log(`Clicking on: ${project.title} - ${project.link}`);
-                    e.preventDefault();
-                    window.location.href = project.link;
-                  }}
                 >
                   <div className="relative h-96 overflow-hidden">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />

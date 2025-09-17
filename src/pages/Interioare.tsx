@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import interiorProject1 from "@/assets/interior-project-1.jpg";
 import interiorProject2 from "@/assets/interior-project-2.jpg";
 
@@ -60,6 +62,25 @@ const Interioare = () => {
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Section */}
+      <section className="bg-black py-20">
+        <div className="w-full px-8">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-8 tracking-wide">
+              ARHITECTURĂ
+            </h2>
+            <p className="text-lg text-white/75 mb-12 max-w-2xl mx-auto">
+              Proiecte arhitecturale contemporane cu finisaje premium și spații funcționale
+            </p>
+            <Link to="/arhitectura">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black transition-colors duration-300">
+                Vezi Proiectele Arhitecturale
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
