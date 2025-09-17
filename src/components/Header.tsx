@@ -8,6 +8,10 @@ const Header = () => {
               Interioare
             </a>
             
+            <a href="/arhitectura" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+              Arhitectura
+            </a>
+            
             <a href="#servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Servicii
             </a>
