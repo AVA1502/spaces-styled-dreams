@@ -1,6 +1,6 @@
 const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-8">
         <nav className="flex items-center justify-center relative">
           {/* Left side navigation */}
           <div className="flex items-center gap-2 md:gap-3 absolute left-0 mx-0">
