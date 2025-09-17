@@ -3,17 +3,17 @@ const Header = () => {
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-center relative">
           {/* Left side navigation */}
-          <div className="flex items-center gap-1 md:gap-2 absolute left-0 mx-0">
-            <a href="/interioare" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+          <div className="flex items-center gap-2 md:gap-3 absolute left-0 mx-0">
+            <a href="/interioare" className="text-[10px] uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Interioare
             </a>
-            <a href="#arhitectura" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+            <a href="#arhitectura" className="text-[10px] uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Arhitectură
             </a>
-            <a href="#servicii" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+            <a href="#servicii" className="text-[10px] uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Servicii
             </a>
-            <a href="#contact" className="text-xs uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
+            <a href="#contact" className="text-[10px] uppercase tracking-[0.15em] text-white/70 hover:text-white transition-quick font-light">
               Contact
             </a>
           </div>
