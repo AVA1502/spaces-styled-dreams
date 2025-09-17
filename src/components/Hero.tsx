@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   const videos = ["/video-1.mp4", "/video-2.mp4"];
   const [currentVideo, setCurrentVideo] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideo(prev => (prev + 1) % videos.length);
@@ -12,25 +10,12 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, [videos.length]);
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Videos with Overlay */}
       <div className="absolute inset-0">
-        {videos.map((video, index) => (
-          <video 
-            key={index}
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[2000ms] ${
-              index === currentVideo ? 'opacity-70' : 'opacity-0'
-            }`}
-          >
+        {videos.map((video, index) => <video key={index} autoPlay muted loop playsInline className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-[2000ms] ${index === currentVideo ? 'opacity-70' : 'opacity-0'}`}>
             <source src={video} type="video/mp4" />
-          </video>
-        ))}
+          </video>)}
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
@@ -52,20 +37,15 @@ const Hero = () => {
       
       {/* Write Us Button - Top Right */}
       <div className="absolute top-8 right-8 z-20">
-        <Button 
-          variant="outline" 
-          className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black transition-smooth px-6 py-2 text-sm tracking-wider"
-        >
+        <Button variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black transition-smooth px-6 py-2 text-sm tracking-wider">
           Scrie-ne
         </Button>
       </div>
       
       {/* Year and Location - Top Right below button */}
       <div className="absolute top-20 right-8 text-right text-xs text-white/60 font-light tracking-widest">
-        <div>2024 București, România</div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
