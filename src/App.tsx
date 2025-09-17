@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Interioare from "./pages/Interioare";
 import ContemporaryElegance from "./pages/ContemporaryElegance";
+import ModernMinimalism from "./pages/ModernMinimalism";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/interioare" element={<Interioare />} />
           <Route path="/interioare/contemporary-elegance" element={<ContemporaryElegance />} />
+          <Route path="/interioare/modern-minimalism" element={<ModernMinimalism />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

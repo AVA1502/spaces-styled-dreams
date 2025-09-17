@@ -11,9 +11,9 @@ const Interioare = () => {
       description: "Design modern cu linii curate și materialе naturale"
     },
     {
-      title: "MODERN INDUSTRIAL",
+      title: "MODERN MINIMALISM",
       image: interiorProject2,
-      description: "Spațiu industrial sofisticat cu accente contemporane"
+      description: "Design minimalist cu elemente de beton și lemn natural"
     }
   ];
 
@@ -39,7 +39,7 @@ const Interioare = () => {
             {projects.map((project, index) => (
               <a 
                 key={index} 
-                href={index === 0 ? "/interioare/contemporary-elegance" : "#"}
+                href={index === 0 ? "/interioare/contemporary-elegance" : "/interioare/modern-minimalism"}
                 className="group overflow-hidden cursor-pointer block"
               >
                 <div className="relative h-screen overflow-hidden">
