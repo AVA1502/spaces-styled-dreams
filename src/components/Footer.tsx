@@ -38,7 +38,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} Mario Ganceariuc. Toate drepturile rezervate.
               </div>
               <div className="text-xs text-muted-foreground">
-                by novelul0 studio
+                Design & Development by Studio
               </div>
             </div>
           </div>
