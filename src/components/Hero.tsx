@@ -29,9 +29,7 @@ const Hero = () => {
           </h1>
           
           {/* Subtitle */}
-          <p className="text-base md:text-lg text-white/80 font-light tracking-[0.1em] max-w-2xl mx-auto">
-            Îmbunătățim calitatea vieții, excluzând mediocritatea
-          </p>
+          <p className="text-base md:text-lg text-white/80 font-light tracking-[0.1em] max-w-2xl mx-auto">Construim o viață mai bună, fără compromisuri</p>
         </div>
       </div>
       
