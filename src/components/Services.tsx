@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import bedroomImage from "@/assets/portfolio-bedroom.jpg";
 import kitchenImage from "@/assets/portfolio-kitchen.jpg";
 import livingRoomImage from "@/assets/living-room.jpg";
@@ -10,21 +11,25 @@ import restaurantBarImage from "@/assets/restaurant-bar.jpg";
 import luxuryInteriorImage from "@/assets/luxury-interior.jpg";
 const Services = () => {
   const projects = [{
-    title: "EXTERIOR ARCHITECTURE",
+    title: "ARHITECTURĂ",
     image: architectureImage,
-    description: "Arhitectură exterior"
+    description: "Proiecte arhitecturale contemporane",
+    link: "/arhitectura"
   }, {
-    title: "ELEGANT INTERIOR",
+    title: "INTERIOARE",
     image: modernBedroomImage,
-    description: "Interior modern"
+    description: "Design interior modern și elegant",
+    link: "/interioare"
   }, {
     title: "RESTAURANT BAR",
     image: restaurantBarImage,
-    description: "Design bar"
+    description: "Design comercial și HoReCa",
+    link: "#"
   }, {
     title: "LUXURY INTERIOR",
     image: luxuryInteriorImage,
-    description: "Interior de lux"
+    description: "Interioare de lux personalizate",
+    link: "#"
   }];
   return <section id="servicii" className="pt-32 bg-background">
       <div className="w-full">
@@ -32,7 +37,8 @@ const Services = () => {
           
 
           <div className="grid grid-cols-2 gap-y-8 gap-x-0 w-full">
-            {projects.map((project, index) => <div key={index} className="group overflow-hidden cursor-pointer">
+            {projects.map((project, index) => 
+              <Link key={index} to={project.link} className="group overflow-hidden cursor-pointer block">
                 <div className="relative h-96 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>
@@ -40,7 +46,8 @@ const Services = () => {
                   <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
                   <p className="text-sm opacity-75">{project.description}</p>
                 </div>
-              </div>)}
+              </Link>
+            )}
           </div>
 
           <div className="py-32 text-center">
