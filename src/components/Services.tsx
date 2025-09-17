@@ -9,6 +9,7 @@ import architectureImage from "@/assets/architecture-exterior.jpg";
 import modernBedroomImage from "@/assets/modern-bedroom.jpg";
 import restaurantBarImage from "@/assets/restaurant-bar.jpg";
 import luxuryInteriorImage from "@/assets/luxury-interior.jpg";
+
 const Services = () => {
   const projects = [{
     title: "ARHITECTURĂ",
@@ -31,28 +32,47 @@ const Services = () => {
     description: "Interioare de lux personalizate",
     link: "#"
   }];
-  return <section id="servicii" className="pt-32 bg-background">
+
+  return (
+    <section id="servicii" className="pt-32 bg-background">
       <div className="w-full">
         <div className="w-full">
-          
-
           <div className="grid grid-cols-2 gap-y-8 gap-x-0 w-full">
-            {projects.map((project, index) => 
-              <Link 
-                key={index} 
-                to={project.link} 
-                className="group overflow-hidden cursor-pointer block"
-                onClick={() => console.log(`Navigating to: ${project.link}`)}
-              >
-                <div className="relative h-96 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                </div>
-                <div className="pt-6 text-foreground">
-                  <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
-                  <p className="text-sm opacity-75">{project.description}</p>
-                </div>
-              </Link>
-            )}
+            {projects.map((project, index) => {
+              if (project.link === "#") {
+                return (
+                  <div key={index} className="group overflow-hidden cursor-not-allowed block opacity-50">
+                    <div className="relative h-96 overflow-hidden">
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="pt-6 text-foreground">
+                      <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
+                      <p className="text-sm opacity-75">{project.description}</p>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link 
+                  key={index} 
+                  to={project.link} 
+                  className="group overflow-hidden cursor-pointer block hover:opacity-90 transition-opacity"
+                  onClick={(e) => {
+                    console.log(`Clicking on: ${project.title} - ${project.link}`);
+                    e.preventDefault();
+                    window.location.href = project.link;
+                  }}
+                >
+                  <div className="relative h-96 overflow-hidden">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  </div>
+                  <div className="pt-6 text-foreground">
+                    <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
+                    <p className="text-sm opacity-75">{project.description}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
           <div className="py-32 text-center">
@@ -62,6 +82,8 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Services;
