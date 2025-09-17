@@ -35,9 +35,7 @@ const Hero = () => {
       
       {/* Write Us Button - Top Right */}
       <div className="absolute top-8 right-8 z-20">
-        <Button variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white hover:text-black transition-smooth px-6 py-2 text-sm tracking-wider">
-          Scrie-ne
-        </Button>
+        
       </div>
       
       {/* Year and Location - Top Right below button */}
