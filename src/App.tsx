@@ -8,6 +8,7 @@ import Interioare from "./pages/Interioare";
 import ContemporaryElegance from "./pages/ContemporaryElegance";
 import ModernMinimalism from "./pages/ModernMinimalism";
 import Architecture from "./pages/Architecture";
+import Servicii from "./pages/Servicii";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/interioare/contemporary-elegance" element={<ContemporaryElegance />} />
           <Route path="/interioare/modern-minimalism" element={<ModernMinimalism />} />
           <Route path="/arhitectura" element={<Architecture />} />
+          <Route path="/servicii" element={<Servicii />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

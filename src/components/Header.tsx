@@ -12,7 +12,7 @@ const Header = () => {
               Arhitectura
             </a>
             
-            <a href="#servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+            <a href="/servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Servicii
             </a>
             <a href="#contact" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
