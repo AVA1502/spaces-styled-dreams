@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="space-y-2">
                   <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-                  <div className="text-lg text-foreground">elena@popescudesign.ro</div>
+                  <div className="text-lg text-foreground">mario@ganceariucdesign.ro</div>
                 </div>
                 
                 <div className="space-y-2">
