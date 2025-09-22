@@ -1,4 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { X } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
 import architectureImage from "@/assets/architecture-exterior.jpg";
 import modernInteriorCeramic from "@/assets/modern-interior-ceramic.jpg";
@@ -7,6 +16,9 @@ import modernLivingWarm from "@/assets/modern-living-warm.jpg";
 import modernHallwayDesign from "@/assets/modern-hallway-design.jpg";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState<number | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   const projects = [{
     title: "DESIGN REZIDENȚIAL",
     image: modernInteriorCeramic,
@@ -88,36 +100,24 @@ const Services = () => {
       <div className="w-full">
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-8 w-full max-w-6xl mx-auto">
-            {projects.map((project, index) => {
-              if (project.link === "#") {
-                return (
-                  <div key={index} className="group overflow-hidden cursor-not-allowed block opacity-50">
-                    <div className="relative h-96 overflow-hidden">
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="pt-6 text-foreground">
-                      <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
-                      <p className="text-sm opacity-75">{project.description}</p>
-                    </div>
-                  </div>
-                );
-              }
-              return (
-                <Link 
-                  key={index} 
-                  to={project.link} 
-                  className="group overflow-hidden cursor-pointer block hover:opacity-90 transition-opacity"
-                >
-                  <div className="relative h-96 overflow-hidden">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                  </div>
-                  <div className="pt-6 text-foreground">
-                    <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
-                    <p className="text-sm opacity-75">{project.description}</p>
-                  </div>
-                </Link>
-              );
-            })}
+            {projects.map((project, index) => (
+              <div 
+                key={index} 
+                className="group overflow-hidden cursor-pointer block hover:opacity-90 transition-opacity"
+                onClick={() => {
+                  setSelectedService(index);
+                  setIsOpen(true);
+                }}
+              >
+                <div className="relative h-96 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <div className="pt-6 text-foreground">
+                  <h3 className="text-xl md:text-2xl font-light mb-1">{project.title}</h3>
+                  <p className="text-sm opacity-75">{project.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="py-32 text-center">
@@ -126,6 +126,87 @@ const Services = () => {
             </Button>
           </div>
         </div>
+
+        {/* Service Detail Sheet */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetContent className="w-full sm:max-w-2xl overflow-y-auto">
+            {selectedService !== null && (
+              <div className="space-y-6">
+                <SheetHeader className="space-y-4">
+                  <button 
+                    onClick={() => setIsOpen(false)}
+                    className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                  <div className="relative h-64 overflow-hidden rounded-lg">
+                    <img 
+                      src={projects[selectedService].image} 
+                      alt={projects[selectedService].title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <SheetTitle className="text-2xl font-light text-left">
+                    {projects[selectedService].title}
+                  </SheetTitle>
+                </SheetHeader>
+
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-medium">Descriere serviciu:</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {projects[selectedService].description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-medium">Conținut serviciu:</h3>
+                    <div className="space-y-2">
+                      {projects[selectedService].details.map((detail, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <span className="text-sm font-medium text-muted-foreground mt-0.5">
+                            {idx + 1}.
+                          </span>
+                          <span className="text-sm text-foreground leading-relaxed">
+                            {detail}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {projects[selectedService].finishes && (
+                    <div className="space-y-3">
+                      <h3 className="text-lg font-medium">Specificații tehnice și materiale:</h3>
+                      <div className="space-y-2">
+                        {projects[selectedService].finishes.map((finish, idx) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <span className="text-sm font-medium text-muted-foreground mt-0.5">
+                              {idx + 1}.
+                            </span>
+                            <span className="text-sm text-foreground leading-relaxed">
+                              {finish}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {projects[selectedService].link !== "#" && (
+                    <div className="pt-6">
+                      <Link to={projects[selectedService].link}>
+                        <Button className="w-full">
+                          Vezi Proiectele din această categorie
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </SheetContent>
+        </Sheet>
       </div>
     </section>
   );
