@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -28,14 +29,14 @@ const Header = () => {
               <SheetContent side="right" className="bg-black border-white/10 w-[280px]">
                 <div className="flex flex-col gap-6 mt-8">
                   {menuItems.map((item) => (
-                    <a
+                    <Link
                       key={item.href}
-                      href={item.href}
+                      to={item.href}
                       onClick={() => setOpen(false)}
                       className="text-lg text-white/80 hover:text-white transition-quick font-bold"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </SheetContent>
@@ -44,29 +45,29 @@ const Header = () => {
 
           {/* Desktop Navigation - Left side */}
           <div className="hidden lg:flex items-center gap-6 absolute left-[13px]">
-            <a href="/interioare" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+            <Link to="/interioare" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Interioare
-            </a>
+            </Link>
             
-            <a href="/arhitectura" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+            <Link to="/arhitectura" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Arhitectura
-            </a>
+            </Link>
             
-            <a href="/servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+            <Link to="/servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Servicii
-            </a>
-            <a href="/despre" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+            </Link>
+            <Link to="/despre" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Despre
-            </a>
+            </Link>
             <a href="#contact" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Contact
             </a>
           </div>
           
           {/* Centered Logo */}
-          <a href="/" className="text-base tracking-normal text-white font-sans hover:text-white/80 transition-quick cursor-pointer">
+          <Link to="/" className="text-base tracking-normal text-white font-sans hover:text-white/80 transition-quick cursor-pointer">
             modwalls
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
