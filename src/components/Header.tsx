@@ -25,7 +25,7 @@ const Header = () => {
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-black border-white/10 w-[280px]">
+              <SheetContent side="right" className="bg-black border-white/10 w-[280px]">
                 <div className="flex flex-col gap-6 mt-8">
                   {menuItems.map((item) => (
                     <a
