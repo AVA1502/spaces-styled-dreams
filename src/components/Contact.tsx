@@ -15,6 +15,24 @@ const Contact = () => {
             CONTACT
           </h2>
 
+          {/* About modwalls Studio */}
+          <div className="mb-20 max-w-3xl">
+            <h3 className="text-3xl font-light mb-6 text-foreground">
+              modwalls Studio – Arta Designului Interior
+            </h3>
+            <div className="space-y-4 text-foreground/80 leading-relaxed">
+              <p>
+                La modwalls Studio, transformăm spațiile în experiențe memorabile. De ani buni, ne dedicăm cu pasiune și profesionalism artei designului interior, combinând estetica rafinată cu funcționalitatea inteligentă. Fiecare proiect pe care îl creăm reflectă stilul unic al clientului, atenția la detalii și armonia dintre culori, materiale și lumină.
+              </p>
+              <p>
+                Abordarea noastră integrată acoperă tot procesul – de la concept și planificare, până la supravegherea execuției și selecția fiecărui element decorativ. Credem că un spațiu bine gândit nu doar că arată frumos, dar inspiră, emoționează și creează confort autentic.
+              </p>
+              <p>
+                La ModWalls Studio, designul devine experiență, iar casa sau spațiul tău devine un loc cu adevărat special.
+              </p>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="space-y-8">
