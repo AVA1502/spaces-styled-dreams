@@ -17,8 +17,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm w-full">
       <div className="w-full bg-black my-0 mx-0 px-[13px] py-[2px]">
         <nav className="flex items-center justify-center relative w-full font-inter">
-          {/* Mobile Menu Button - Left side */}
-          <div className="absolute left-[13px] lg:hidden">
+          {/* Mobile Menu Button - Right side */}
+          <div className="absolute right-[13px] lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <button className="text-white p-2">
