@@ -15,6 +15,9 @@ const Header = () => {
             <a href="/servicii" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Servicii
             </a>
+            <a href="/despre" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
+              Despre
+            </a>
             <a href="#contact" className="text-[10px] text-white/60 hover:text-white transition-quick font-bold">
               Contact
             </a>
