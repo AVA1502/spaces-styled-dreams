@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 import marioPortrait from "@/assets/mario-portrait.jpg";
 
 const Despre = () => {
@@ -61,6 +62,7 @@ const Despre = () => {
           </div>
         </div>
       </main>
+      <Contact />
       <Footer />
     </div>
   );
