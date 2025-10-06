@@ -17,18 +17,18 @@ const Despre = () => {
               DESPRE
             </h1>
 
-            <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
-              {/* Image */}
-              <div className="order-2 lg:order-1">
-                <img 
-                  src={marioPortrait} 
-                  alt="Mario Gancearuc - Designer Interior" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            {/* Image */}
+            <div className="mb-16 max-w-2xl mx-auto">
+              <img 
+                src={marioPortrait} 
+                alt="Mario Gancearuc - Designer Interior" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
 
-              {/* Content */}
-              <div className="order-1 lg:order-2 space-y-6 text-foreground/80 leading-relaxed">
+            {/* Content */}
+            <div className="max-w-3xl mx-auto">
+              <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <h2 className="text-3xl md:text-4xl font-light text-foreground mb-8">
                   Despre Mario Gancearuc & Mod Walls Studio
                 </h2>
